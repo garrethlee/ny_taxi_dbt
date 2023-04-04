@@ -41,7 +41,7 @@ select
 from tripdata
 where vendorid is not null and rn = 1
 
-{% if {{ env_var('DBT_IS_TEST') }}%}
+{% if env_var('DBT_IS_TEST') %}
 
 limit 100
 
