@@ -58,7 +58,7 @@ select
     inner join dim_zones dropoff 
     on dropoff.location_id = trips_unioned.dropoff_locationid -- for dropoff
 
-{% if {{ env_var('DBT_IS_TEST') }} %}
+{% if env_var('DBT_IS_TEST') %}
 
 limit 100
 
